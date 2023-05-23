@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[   1579201,      27099]
-NotebookOptionsPosition[   1573956,      27010]
-NotebookOutlinePosition[   1574779,      27038]
-CellTagsIndexPosition[   1574736,      27035]
+NotebookDataLength[   1568132,      26865]
+NotebookOptionsPosition[   1563184,      26779]
+NotebookOutlinePosition[   1564007,      26807]
+CellTagsIndexPosition[   1563964,      26804]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -26400,551 +26400,320 @@ functions---------\>\""}], ";"}]}]], "Input",
    3.8871604173826017`*^9}, {3.8873297612409463`*^9, 3.8873298010439444`*^9}},
  CellLabel->"In[26]:=",ExpressionUUID->"9479e090-2234-4e63-b236-f702adb70c31"],
 
-Cell[BoxData[
- RowBox[{"(*", 
-  RowBox[{"outputOfOuterPSOWithTestFunctions", "=", 
-   RowBox[{"ConstantArray", "[", 
-    RowBox[{"0", ",", 
-     RowBox[{"{", 
-      RowBox[{"7", ",", "5"}], "}"}]}], "]"}]}], "*)"}]], "Input",
- CellChangeTimes->{{3.8871495088771496`*^9, 3.8871495359194455`*^9}, {
-   3.887149579894559*^9, 3.887149594931672*^9}, 3.8877549737949114`*^9},
- CellLabel->"In[27]:=",ExpressionUUID->"d2e68ea9-f0bf-4af4-9a1b-d8b8e8c1c757"],
-
-Cell[BoxData[
- RowBox[{"(*", 
-  RowBox[{
-   RowBox[{"listWithAllMinimumPtsValueForEachFunction", " ", "=", " ", 
-    RowBox[{"Table", "[", 
-     RowBox[{"0", ",", "7"}], "]"}]}], ";"}], "*)"}]], "Input",
- CellChangeTimes->{{3.8871519989922476`*^9, 3.887152012020878*^9}, {
-   3.8871583224039884`*^9, 3.887158334985341*^9}, {3.8871584019761906`*^9, 
-   3.8871585110168705`*^9}, {3.887160485529491*^9, 3.8871604887946634`*^9}, {
-   3.887162871157219*^9, 3.8871628811375127`*^9}, 3.8877549780654716`*^9},
- CellLabel->"In[28]:=",ExpressionUUID->"588ea127-e8b1-4c92-ad2d-68409714159f"],
-
-Cell[BoxData[
- RowBox[{"(*", 
-  RowBox[{
-   RowBox[{"functionList", "=", 
-    RowBox[{"{", 
-     RowBox[{
-     "fun1", ",", " ", "fun2", ",", " ", "fun3", ",", " ", "fun4", ",", " ", 
-      "fun5", ",", " ", "fun6", ",", " ", "fun7"}], "}"}]}], ";", 
-   "\[IndentingNewLine]", 
-   RowBox[{"functionIndexWhichProducedMinimumPts", " ", "=", " ", "0"}], ";", 
-   "\[IndentingNewLine]", 
-   RowBox[{"allParametersC1andC2andWPositionForAGivenFunction", " ", "=", " ", 
-    RowBox[{"ConstantArray", "[", 
-     RowBox[{"0", ",", 
-      RowBox[{"{", 
-       RowBox[{"7", ",", "3"}], "}"}]}], "]"}]}], ";", "\[IndentingNewLine]", 
-   RowBox[{
-   "parametersC1andC2andWWhichProducedMinimumPtsForAGivenFunction", " ", "=", 
-    " ", 
-    RowBox[{"ConstantArray", "[", 
-     RowBox[{"0", ",", 
-      RowBox[{"{", 
-       RowBox[{"7", ",", "3"}], "}"}]}], "]"}]}], ";"}], "*)"}]], "Input",
- CellChangeTimes->{
-  3.8871511706394696`*^9, {3.887151827045066*^9, 3.88715185997785*^9}, {
-   3.8871588130532603`*^9, 3.8871588213581533`*^9}, {3.887160447666418*^9, 
-   3.8871604708385873`*^9}, {3.8871609661132183`*^9, 3.887161001202347*^9}, {
-   3.887161050403723*^9, 3.8871610682838335`*^9}, {3.887161100441902*^9, 
-   3.8871611330599847`*^9}, {3.8871612467710533`*^9, 
-   3.8871613388865724`*^9}, {3.8871614188658066`*^9, 3.88716142045815*^9}, 
-   3.887162461552193*^9, {3.8871627608506126`*^9, 3.887162799003682*^9}, {
-   3.8871629064036093`*^9, 3.8871629069501395`*^9}, 3.8877549834764843`*^9},
- CellLabel->"In[29]:=",ExpressionUUID->"f54b7764-4436-40ce-a9f6-04d7d63a2d14"],
-
-Cell[BoxData[
+Cell[BoxData[{
  RowBox[{
-  RowBox[{"(*", 
-   RowBox[{
-    RowBox[{"For", "[", 
-     RowBox[{
-      RowBox[{"u", "=", "1"}], ",", 
-      RowBox[{"u", "<=", "7"}], ",", 
-      RowBox[{"u", "++"}], ",", "\[IndentingNewLine]", 
-      RowBox[{"(*", 
-       RowBox[{
-        RowBox[{"PSOAlgorithmOuter", "[", " ", 
-         RowBox[{
-         "f_", ",", "swarmDim_", ",", "fLimit_", ",", " ", "NPForInnerPSO_", 
-          ",", "NPForOuterPSO_", ",", "  ", "iterationsForInnerPSO_", ",", 
-          "iterationsForOuterPSO_", ",", " ", "c1_", ",", " ", "c2_", ",", 
-          " ", "w_", ",", " ", "realData_", ",", " ", "pts_"}], "]"}], ";"}], 
-       "*)"}], "\[IndentingNewLine]", 
-      RowBox[{"(*", 
-       RowBox[{
-        RowBox[{"Return", "@", 
-         RowBox[{"{", 
-          RowBox[{
-          "gBestPosition", ",", " ", "historyGBestPosition", ",", " ", 
-           "historyGBestCost", ",", "swarmPositionCost", ",", " ", 
-           "swarmPosition"}], "}"}]}], ";"}], "*)"}], "\[IndentingNewLine]", 
-      RowBox[{
-       RowBox[{
-        RowBox[{"outputOfOuterPSOWithTestFunctions", "[", 
-         RowBox[{"[", "u", "]"}], "]"}], "=", " ", 
-        RowBox[{"PSOAlgorithmOuter", "[", 
-         RowBox[{
-          RowBox[{"functionList", "[", 
-           RowBox[{"[", "u", "]"}], "]"}], ",", " ", "3", ",", 
-          RowBox[{"{", 
-           RowBox[{
-            RowBox[{"-", "5"}], ",", "5"}], "}"}], ",", " ", "14", ",", "14", 
-          ",", "2", ",", "2", " ", ",", "1.49445", ",", "1.49445", ",", 
-          "0.729", ",", "  ", "realData", ",", " ", "pts"}], "]"}]}], ";", 
-       "\[IndentingNewLine]", 
-       RowBox[{
-       "allParametersC1andC2andWPositionForAGivenFunction", " ", "=", " ", 
-        RowBox[{
-         RowBox[{"outputOfOuterPSOWithTestFunctions", "[", 
-          RowBox[{"[", "u", "]"}], "]"}], "[", 
-         RowBox[{"[", "5", "]"}], "]"}]}], ";", "\[IndentingNewLine]", 
-       RowBox[{
-        RowBox[{
-        "parametersC1andC2andWWhichProducedMinimumPtsForAGivenFunction", "[", 
-         RowBox[{"[", "u", "]"}], "]"}], " ", "=", " ", 
-        RowBox[{"allParametersC1andC2andWPositionForAGivenFunction", "[", 
-         RowBox[{"[", 
-          RowBox[{"First", "@", 
-           RowBox[{"First", "@", 
-            RowBox[{"Position", "[", 
-             RowBox[{
-              RowBox[{
-               RowBox[{"outputOfOuterPSOWithTestFunctions", "[", 
-                RowBox[{"[", "u", "]"}], "]"}], "[", 
-               RowBox[{"[", "4", "]"}], "]"}], ",", " ", 
-              RowBox[{"Min", "@", 
-               RowBox[{
-                RowBox[{"outputOfOuterPSOWithTestFunctions", "[", 
-                 RowBox[{"[", "u", "]"}], "]"}], "[", 
-                RowBox[{"[", "4", "]"}], "]"}]}]}], "]"}]}]}], "]"}], "]"}]}],
-        ";", "\[IndentingNewLine]", 
-       RowBox[{
-        RowBox[{"listWithAllMinimumPtsValueForEachFunction", "[", 
-         RowBox[{"[", "u", "]"}], "]"}], "=", " ", 
-        RowBox[{"Min", "[", 
-         RowBox[{
-          RowBox[{"outputOfOuterPSOWithTestFunctions", "[", 
-           RowBox[{"[", "u", "]"}], "]"}], "[", 
-          RowBox[{"[", "4", "]"}], "]"}], "]"}]}], ";"}]}], 
-     "\[IndentingNewLine]", "]"}], ";", "\[IndentingNewLine]", 
-    RowBox[{"functionIndexWhichProducedMinimumPts", " ", "=", " ", 
-     RowBox[{"Position", "[", 
-      RowBox[{"listWithAllMinimumPtsValueForEachFunction", ",", " ", 
-       RowBox[{"Min", "@", "listWithAllMinimumPtsValueForEachFunction"}]}], 
-      "]"}]}], ";", "\[IndentingNewLine]", "\[IndentingNewLine]", 
-    RowBox[{"Switch", "[", 
-     RowBox[{
-      RowBox[{"First", "@", 
-       RowBox[{"First", "@", "functionIndexWhichProducedMinimumPts"}]}], ",", 
-      "\[IndentingNewLine]", "1", ",", "\[IndentingNewLine]", 
-      RowBox[{
-       RowBox[{
-       "Print", "@", "\"\<fun1 produced the minimum value of pts\>\""}], ";", 
-       "\[IndentingNewLine]", 
-       RowBox[{"Print", "[", 
-        RowBox[{
-        "parametersC1andC2andWWhichProducedMinimumPtsForAGivenFunction", "[", 
-         RowBox[{"[", "1", "]"}], "]"}], "]"}], ";", "\[IndentingNewLine]", 
-       RowBox[{"Print", "[", 
-        RowBox[{"listWithAllMinimumPtsValueForEachFunction", "[", 
-         RowBox[{"[", "1", "]"}], "]"}], "]"}], ";"}], "\[IndentingNewLine]", 
-      ",", "\[IndentingNewLine]", "2", ",", " ", "\[IndentingNewLine]", 
-      RowBox[{
-       RowBox[{
-       "Print", "@", "\"\<fun2 produced the minimum value of pts\>\""}], ";", 
-       "\[IndentingNewLine]", 
-       RowBox[{"Print", "[", 
-        RowBox[{
-        "parametersC1andC2andWWhichProducedMinimumPtsForAGivenFunction", "[", 
-         RowBox[{"[", "2", "]"}], "]"}], "]"}], ";", "\[IndentingNewLine]", 
-       RowBox[{"Print", "[", 
-        RowBox[{"listWithAllMinimumPtsValueForEachFunction", "[", 
-         RowBox[{"[", "2", "]"}], "]"}], "]"}], ";"}], "\[IndentingNewLine]", 
-      ",", "\[IndentingNewLine]", "3", ",", "\[IndentingNewLine]", 
-      RowBox[{
-       RowBox[{
-       "Print", "@", "\"\<fun3 produced the minimum value of pts\>\""}], ";", 
-       "\[IndentingNewLine]", 
-       RowBox[{"Print", "[", 
-        RowBox[{
-        "parametersC1andC2andWWhichProducedMinimumPtsForAGivenFunction", "[", 
-         RowBox[{"[", "3", "]"}], "]"}], "]"}], ";", "\[IndentingNewLine]", 
-       RowBox[{"Print", "[", 
-        RowBox[{"listWithAllMinimumPtsValueForEachFunction", "[", 
-         RowBox[{"[", "3", "]"}], "]"}], "]"}], ";"}], "\[IndentingNewLine]", 
-      ",", "\[IndentingNewLine]", "4", ",", "\[IndentingNewLine]", 
-      RowBox[{
-       RowBox[{
-       "Print", "@", "\"\<fun4 produced the minimum value of pts\>\""}], ";", 
-       "\[IndentingNewLine]", 
-       RowBox[{"Print", "[", 
-        RowBox[{
-        "parametersC1andC2andWWhichProducedMinimumPtsForAGivenFunction", "[", 
-         RowBox[{"[", "4", "]"}], "]"}], "]"}], ";", "\[IndentingNewLine]", 
-       RowBox[{"Print", "[", 
-        RowBox[{"listWithAllMinimumPtsValueForEachFunction", "[", 
-         RowBox[{"[", "4", "]"}], "]"}], "]"}], ";"}], "\[IndentingNewLine]", 
-      ",", "\[IndentingNewLine]", "5", ",", "\[IndentingNewLine]", 
-      RowBox[{
-       RowBox[{
-       "Print", "@", "\"\<fun5 produced the minimum value of pts\>\""}], ";", 
-       "\[IndentingNewLine]", 
-       RowBox[{"Print", "[", 
-        RowBox[{
-        "parametersC1andC2andWWhichProducedMinimumPtsForAGivenFunction", "[", 
-         RowBox[{"[", "5", "]"}], "]"}], "]"}], ";", "\[IndentingNewLine]", 
-       RowBox[{"Print", "[", 
-        RowBox[{"listWithAllMinimumPtsValueForEachFunction", "[", 
-         RowBox[{"[", "5", "]"}], "]"}], "]"}], ";"}], "\[IndentingNewLine]", 
-      ",", "\[IndentingNewLine]", "6", ",", "\[IndentingNewLine]", 
-      RowBox[{
-       RowBox[{
-       "Print", "@", "\"\<fun6 produced the minimum value of pts\>\""}], ";", 
-       "\[IndentingNewLine]", 
-       RowBox[{"Print", "[", 
-        RowBox[{
-        "parametersC1andC2andWWhichProducedMinimumPtsForAGivenFunction", "[", 
-         RowBox[{"[", "6", "]"}], "]"}], "]"}], ";", "\[IndentingNewLine]", 
-       RowBox[{"Print", "[", 
-        RowBox[{"listWithAllMinimumPtsValueForEachFunction", "[", 
-         RowBox[{"[", "6", "]"}], "]"}], "]"}], ";"}], "\[IndentingNewLine]", 
-      ",", "\[IndentingNewLine]", "7", ",", "\[IndentingNewLine]", 
-      RowBox[{
-       RowBox[{
-       "Print", "@", "\"\<fun7 produced the minimum value of pts\>\""}], ";", 
-       "\[IndentingNewLine]", 
-       RowBox[{"Print", "[", 
-        RowBox[{
-        "parametersC1andC2andWWhichProducedMinimumPtsForAGivenFunction", "[", 
-         RowBox[{"[", "7", "]"}], "]"}], "]"}], ";", "\[IndentingNewLine]", 
-       RowBox[{"Print", "[", 
-        RowBox[{"listWithAllMinimumPtsValueForEachFunction", "[", 
-         RowBox[{"[", "7", "]"}], "]"}], "]"}], ";"}]}], 
-     "\[IndentingNewLine]", "]"}], ";"}], "*)"}], "\[IndentingNewLine]", 
-  "\[IndentingNewLine]", 
   RowBox[{
    RowBox[{
-    RowBox[{
-     RowBox[{"functionRange", "[", "f_", "]"}], ":=", "\[IndentingNewLine]", 
-     RowBox[{"Switch", "[", 
-      RowBox[{"f", ",", "1", ",", 
-       RowBox[{"{", 
-        RowBox[{
-         RowBox[{"-", "5"}], ",", "5"}], "}"}], ",", "2", ",", " ", 
-       RowBox[{"{", 
-        RowBox[{
-         RowBox[{"-", "5"}], ",", "5"}], "}"}], " ", ",", " ", "3", ",", " ", 
-       RowBox[{"{", 
-        RowBox[{"0", ",", "5"}], "}"}], ",", " ", "4", ",", " ", 
-       RowBox[{"{", 
-        RowBox[{
-         RowBox[{"-", "5"}], ",", "5"}], "}"}], ",", " ", "5", ",", 
-       RowBox[{"{", 
-        RowBox[{
-         RowBox[{"-", "5"}], ",", "5"}], "}"}], ",", " ", "6", ",", 
-       RowBox[{"{", 
-        RowBox[{
-         RowBox[{"-", "5"}], ",", "5"}], "}"}], ",", "7", ",", 
-       RowBox[{"{", 
-        RowBox[{
-         RowBox[{"-", "5"}], ",", "5"}], "}"}]}], "\[IndentingNewLine]", 
-      "]"}]}], ";"}], "\[IndentingNewLine]", "\[IndentingNewLine]", 
-   RowBox[{
-    RowBox[{
-     RowBox[{"functionWithBestValueForPts", "[", " ", 
-      RowBox[{
-      "fList_", ",", "swarmDim_", ",", "functionRange_", ",", 
-       "\[IndentingNewLine]", " ", "NPForInnerPSO_", ",", "NPForOuterPSO_", 
-       ",", "  ", "iterationsForInnerPSO_", ",", "iterationsForOuterPSO_", 
-       ",", "\[IndentingNewLine]", " ", "c1_", ",", " ", "c2_", ",", " ", 
-       "w_", ",", " ", "realData_", ",", " ", "pts_", ",", " ", 
-       "resultingParametersForMinPts_", ",", " ", "PSOAlgorithmOuter_"}], 
-      "\[IndentingNewLine]", "]"}], ":=", 
-     RowBox[{"Module", "[", "\[IndentingNewLine]", 
-      RowBox[{
-       RowBox[{"{", "\[IndentingNewLine]", 
-        RowBox[{
-        "outputOfOuterPSOWithTestFunctions", ",", "\[IndentingNewLine]", 
-         "listWithAllMinimumPtsValueForEachFunction", ",", 
-         "\[IndentingNewLine]", "functionList", ",", "\[IndentingNewLine]", 
-         "functionIndexWhichProducedMinimumPts", ",", "\[IndentingNewLine]", 
-         "allParametersC1andC2andWPositionForAGivenFunction", ",", 
-         "\[IndentingNewLine]", 
-         "parametersC1andC2andWWhichProducedMinimumPtsForAGivenFunction", ",",
-          "u"}], "\[IndentingNewLine]", "}"}], ",", "\[IndentingNewLine]", 
+    RowBox[{"functionRange", "[", "f_", "]"}], ":=", "\[IndentingNewLine]", 
+    RowBox[{"Switch", "[", 
+     RowBox[{"f", ",", "1", ",", 
+      RowBox[{"{", 
        RowBox[{
-        RowBox[{"outputOfOuterPSOWithTestFunctions", "=", 
-         RowBox[{"ConstantArray", "[", 
-          RowBox[{"0", ",", 
-           RowBox[{"{", 
-            RowBox[{"7", ",", "5"}], "}"}]}], "]"}]}], ";", 
-        "\[IndentingNewLine]", 
-        RowBox[{"listWithAllMinimumPtsValueForEachFunction", " ", "=", " ", 
-         RowBox[{"Table", "[", 
-          RowBox[{"0", ",", "7"}], "]"}]}], ";", "\[IndentingNewLine]", 
-        RowBox[{"functionList", "=", "fList"}], ";", "\[IndentingNewLine]", 
-        RowBox[{"functionIndexWhichProducedMinimumPts", " ", "=", " ", "0"}], 
-        ";", "\[IndentingNewLine]", 
-        RowBox[{
-        "allParametersC1andC2andWPositionForAGivenFunction", " ", "=", " ", 
-         RowBox[{"ConstantArray", "[", 
-          RowBox[{"0", ",", 
-           RowBox[{"{", 
-            RowBox[{"7", ",", "3"}], "}"}]}], "]"}]}], ";", 
-        "\[IndentingNewLine]", 
-        RowBox[{
-        "parametersC1andC2andWWhichProducedMinimumPtsForAGivenFunction", " ", 
-         "=", " ", 
-         RowBox[{"ConstantArray", "[", 
-          RowBox[{"0", ",", 
-           RowBox[{"{", 
-            RowBox[{"7", ",", "3"}], "}"}]}], "]"}]}], ";", 
-        "\[IndentingNewLine]", 
-        RowBox[{"For", "[", 
-         RowBox[{
-          RowBox[{"u", "=", "1"}], ",", 
-          RowBox[{"u", "<=", 
-           RowBox[{"Length", "@", "fList"}]}], ",", 
-          RowBox[{"u", "++"}], ",", "\[IndentingNewLine]", 
-          RowBox[{"(*", 
-           RowBox[{
-            RowBox[{"PSOAlgorithmOuter", "[", " ", 
-             RowBox[{
-             "f_", ",", "swarmDim_", ",", "fLimit_", ",", " ", 
-              "NPForInnerPSO_", ",", "NPForOuterPSO_", ",", "  ", 
-              "iterationsForInnerPSO_", ",", "iterationsForOuterPSO_", ",", 
-              " ", "c1_", ",", " ", "c2_", ",", " ", "w_", ",", " ", 
-              "realData_", ",", " ", "pts_"}], "]"}], ";"}], "*)"}], 
-          "\[IndentingNewLine]", 
-          RowBox[{"(*", 
-           RowBox[{
-            RowBox[{"Return", "@", 
-             RowBox[{"{", 
-              RowBox[{
-              "gBestPosition", ",", " ", "historyGBestPosition", ",", " ", 
-               "historyGBestCost", ",", "swarmPositionCost", ",", " ", 
-               "swarmPosition"}], "}"}]}], ";"}], "*)"}], 
-          "\[IndentingNewLine]", 
-          RowBox[{
-           RowBox[{"Print", "[", 
-            RowBox[{"\"\<function range for u values =\>\"", ",", " ", 
-             RowBox[{"functionRange", "[", "u", "]"}]}], "]"}], ";", 
-           "\[IndentingNewLine]", 
-           RowBox[{
-            RowBox[{"outputOfOuterPSOWithTestFunctions", "[", 
-             RowBox[{"[", "u", "]"}], "]"}], "=", " ", 
-            RowBox[{"PSOAlgorithmOuter", "[", 
-             RowBox[{
-              RowBox[{"functionList", "[", 
-               RowBox[{"[", "u", "]"}], "]"}], ",", " ", "swarmDim", ",", 
-              RowBox[{"functionRange", "[", "u", "]"}], ",", "NPForInnerPSO", 
-              ",", "NPForOuterPSO", ",", "iterationsForInnerPSO", ",", " ", 
-              "iterationsForOuterPSO", ",", 
-              RowBox[{"resultingParametersForMinPts", "[", 
-               RowBox[{"[", "1", "]"}], "]"}], ",", " ", 
-              RowBox[{"resultingParametersForMinPts", "[", 
-               RowBox[{"[", "2", "]"}], "]"}], ",", " ", 
-              RowBox[{"resultingParametersForMinPts", "[", 
-               RowBox[{"[", "3", "]"}], "]"}], ",", "  ", "realData", ",", 
-              " ", "pts"}], "]"}]}], ";", "\[IndentingNewLine]", 
-           RowBox[{
-           "allParametersC1andC2andWPositionForAGivenFunction", " ", "=", " ", 
-            RowBox[{
-             RowBox[{"outputOfOuterPSOWithTestFunctions", "[", 
-              RowBox[{"[", "u", "]"}], "]"}], "[", 
-             RowBox[{"[", "5", "]"}], "]"}]}], ";", "\[IndentingNewLine]", 
-           RowBox[{
-            RowBox[{
-            "parametersC1andC2andWWhichProducedMinimumPtsForAGivenFunction", 
-             "[", 
-             RowBox[{"[", "u", "]"}], "]"}], " ", "=", " ", 
-            RowBox[{"allParametersC1andC2andWPositionForAGivenFunction", "[", 
-             RowBox[{"[", 
-              RowBox[{"First", "@", 
-               RowBox[{"First", "@", 
-                RowBox[{"Position", "[", 
-                 RowBox[{
-                  RowBox[{
-                   RowBox[{"outputOfOuterPSOWithTestFunctions", "[", 
-                    RowBox[{"[", "u", "]"}], "]"}], "[", 
-                   RowBox[{"[", "4", "]"}], "]"}], ",", " ", 
-                  RowBox[{"Min", "@", 
-                   RowBox[{
-                    RowBox[{"outputOfOuterPSOWithTestFunctions", "[", 
-                    RowBox[{"[", "u", "]"}], "]"}], "[", 
-                    RowBox[{"[", "4", "]"}], "]"}]}]}], "]"}]}]}], "]"}], 
-             "]"}]}], ";", "\[IndentingNewLine]", 
-           RowBox[{
-            RowBox[{"listWithAllMinimumPtsValueForEachFunction", "[", 
-             RowBox[{"[", "u", "]"}], "]"}], "=", " ", 
-            RowBox[{"Min", "[", 
-             RowBox[{
-              RowBox[{"outputOfOuterPSOWithTestFunctions", "[", 
-               RowBox[{"[", "u", "]"}], "]"}], "[", 
-              RowBox[{"[", "4", "]"}], "]"}], "]"}]}], ";"}]}], 
-         "\[IndentingNewLine]", "]"}], ";", "\[IndentingNewLine]", 
-        RowBox[{"functionIndexWhichProducedMinimumPts", " ", "=", " ", 
-         RowBox[{"Position", "[", 
-          RowBox[{"listWithAllMinimumPtsValueForEachFunction", ",", " ", 
-           RowBox[{
-           "Min", "@", "listWithAllMinimumPtsValueForEachFunction"}]}], 
-          "]"}]}], ";", "\[IndentingNewLine]", "\[IndentingNewLine]", 
-        RowBox[{"Switch", "[", 
-         RowBox[{
-          RowBox[{"First", "@", 
-           RowBox[{"First", "@", "functionIndexWhichProducedMinimumPts"}]}], 
-          ",", "\[IndentingNewLine]", "1", ",", "\[IndentingNewLine]", 
-          RowBox[{
-           RowBox[{
-           "Print", "@", "\"\<fun1 produced the minimum value of pts\>\""}], 
-           ";", "\[IndentingNewLine]", 
-           RowBox[{"Print", "[", 
-            RowBox[{
-            "parametersC1andC2andWWhichProducedMinimumPtsForAGivenFunction", 
-             "[", 
-             RowBox[{"[", "1", "]"}], "]"}], "]"}], ";", 
-           "\[IndentingNewLine]", 
-           RowBox[{"Print", "[", 
-            RowBox[{"listWithAllMinimumPtsValueForEachFunction", "[", 
-             RowBox[{"[", "1", "]"}], "]"}], "]"}], ";"}], 
-          "\[IndentingNewLine]", ",", "\[IndentingNewLine]", "2", ",", " ", 
-          "\[IndentingNewLine]", 
-          RowBox[{
-           RowBox[{
-           "Print", "@", "\"\<fun2 produced the minimum value of pts\>\""}], 
-           ";", "\[IndentingNewLine]", 
-           RowBox[{"Print", "[", 
-            RowBox[{
-            "parametersC1andC2andWWhichProducedMinimumPtsForAGivenFunction", 
-             "[", 
-             RowBox[{"[", "2", "]"}], "]"}], "]"}], ";", 
-           "\[IndentingNewLine]", 
-           RowBox[{"Print", "[", 
-            RowBox[{"listWithAllMinimumPtsValueForEachFunction", "[", 
-             RowBox[{"[", "2", "]"}], "]"}], "]"}], ";"}], 
-          "\[IndentingNewLine]", ",", "\[IndentingNewLine]", "3", ",", 
-          "\[IndentingNewLine]", 
-          RowBox[{
-           RowBox[{
-           "Print", "@", "\"\<fun3 produced the minimum value of pts\>\""}], 
-           ";", "\[IndentingNewLine]", 
-           RowBox[{"Print", "[", 
-            RowBox[{
-            "parametersC1andC2andWWhichProducedMinimumPtsForAGivenFunction", 
-             "[", 
-             RowBox[{"[", "3", "]"}], "]"}], "]"}], ";", 
-           "\[IndentingNewLine]", 
-           RowBox[{"Print", "[", 
-            RowBox[{"listWithAllMinimumPtsValueForEachFunction", "[", 
-             RowBox[{"[", "3", "]"}], "]"}], "]"}], ";"}], 
-          "\[IndentingNewLine]", ",", "\[IndentingNewLine]", "4", ",", 
-          "\[IndentingNewLine]", 
-          RowBox[{
-           RowBox[{
-           "Print", "@", "\"\<fun4 produced the minimum value of pts\>\""}], 
-           ";", "\[IndentingNewLine]", 
-           RowBox[{"Print", "[", 
-            RowBox[{
-            "parametersC1andC2andWWhichProducedMinimumPtsForAGivenFunction", 
-             "[", 
-             RowBox[{"[", "4", "]"}], "]"}], "]"}], ";", 
-           "\[IndentingNewLine]", 
-           RowBox[{"Print", "[", 
-            RowBox[{"listWithAllMinimumPtsValueForEachFunction", "[", 
-             RowBox[{"[", "4", "]"}], "]"}], "]"}], ";"}], 
-          "\[IndentingNewLine]", ",", "\[IndentingNewLine]", "5", ",", 
-          "\[IndentingNewLine]", 
-          RowBox[{
-           RowBox[{
-           "Print", "@", "\"\<fun5 produced the minimum value of pts\>\""}], 
-           ";", "\[IndentingNewLine]", 
-           RowBox[{"Print", "[", 
-            RowBox[{
-            "parametersC1andC2andWWhichProducedMinimumPtsForAGivenFunction", 
-             "[", 
-             RowBox[{"[", "5", "]"}], "]"}], "]"}], ";", 
-           "\[IndentingNewLine]", 
-           RowBox[{"Print", "[", 
-            RowBox[{"listWithAllMinimumPtsValueForEachFunction", "[", 
-             RowBox[{"[", "5", "]"}], "]"}], "]"}], ";"}], 
-          "\[IndentingNewLine]", ",", "\[IndentingNewLine]", "6", ",", 
-          "\[IndentingNewLine]", 
-          RowBox[{
-           RowBox[{
-           "Print", "@", "\"\<fun6 produced the minimum value of pts\>\""}], 
-           ";", "\[IndentingNewLine]", 
-           RowBox[{"Print", "[", 
-            RowBox[{
-            "parametersC1andC2andWWhichProducedMinimumPtsForAGivenFunction", 
-             "[", 
-             RowBox[{"[", "6", "]"}], "]"}], "]"}], ";", 
-           "\[IndentingNewLine]", 
-           RowBox[{"Print", "[", 
-            RowBox[{"listWithAllMinimumPtsValueForEachFunction", "[", 
-             RowBox[{"[", "6", "]"}], "]"}], "]"}], ";"}], 
-          "\[IndentingNewLine]", ",", "\[IndentingNewLine]", "7", ",", 
-          "\[IndentingNewLine]", 
-          RowBox[{
-           RowBox[{
-           "Print", "@", "\"\<fun7 produced the minimum value of pts\>\""}], 
-           ";", "\[IndentingNewLine]", 
-           RowBox[{"Print", "[", 
-            RowBox[{
-            "parametersC1andC2andWWhichProducedMinimumPtsForAGivenFunction", 
-             "[", 
-             RowBox[{"[", "7", "]"}], "]"}], "]"}], ";", 
-           "\[IndentingNewLine]", 
-           RowBox[{"Print", "[", 
-            RowBox[{"listWithAllMinimumPtsValueForEachFunction", "[", 
-             RowBox[{"[", "7", "]"}], "]"}], "]"}], ";"}]}], 
-         "\[IndentingNewLine]", "]"}], ";"}]}], "\[IndentingNewLine]", 
-      "]"}]}], ";"}], "\[IndentingNewLine]", "\[IndentingNewLine]", 
-   RowBox[{"(*", " ", 
-    RowBox[{"using", " ", "function", " ", "functionWithBestValueForPts"}], 
-    "*)"}], "\[IndentingNewLine]", "\[IndentingNewLine]", 
+        RowBox[{"-", "5"}], ",", "5"}], "}"}], ",", "2", ",", " ", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"-", "5"}], ",", "5"}], "}"}], " ", ",", " ", "3", ",", " ", 
+      RowBox[{"{", 
+       RowBox[{"0", ",", "5"}], "}"}], ",", " ", "4", ",", " ", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"-", "5"}], ",", "5"}], "}"}], ",", " ", "5", ",", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"-", "5"}], ",", "5"}], "}"}], ",", " ", "6", ",", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"-", "5"}], ",", "5"}], "}"}], ",", "7", ",", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"-", "5"}], ",", "5"}], "}"}]}], "\[IndentingNewLine]", 
+     "]"}]}], ";"}], "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
    RowBox[{
-    RowBox[{"functionList", "=", 
-     RowBox[{"{", 
-      RowBox[{
-      "fun1", ",", " ", "fun2", ",", " ", "fun3", ",", " ", "fun4", ",", " ", 
-       "fun5", ",", " ", "fun6", ",", " ", "fun7"}], "}"}]}], ";"}], 
-   "\[IndentingNewLine]", 
-   RowBox[{"(*", 
     RowBox[{"functionWithBestValueForPts", "[", " ", 
      RowBox[{
      "fList_", ",", "swarmDim_", ",", "functionRange_", ",", 
       "\[IndentingNewLine]", " ", "NPForInnerPSO_", ",", "NPForOuterPSO_", 
       ",", "  ", "iterationsForInnerPSO_", ",", "iterationsForOuterPSO_", ",",
        "\[IndentingNewLine]", " ", "c1_", ",", " ", "c2_", ",", " ", "w_", 
-      ",", " ", "realData_", ",", " ", "pts_"}], "\[IndentingNewLine]", "]"}],
-     "*)"}], "\[IndentingNewLine]", 
-   RowBox[{
-    RowBox[{"functionWithBestValueForPts", "[", 
+      ",", " ", "realData_", ",", " ", "pts_", ",", " ", 
+      "resultingParametersForMinPts_", ",", " ", "PSOAlgorithmOuter_"}], 
+     "\[IndentingNewLine]", "]"}], ":=", 
+    RowBox[{"Module", "[", "\[IndentingNewLine]", 
      RowBox[{
-     "functionList", ",", " ", "3", ",", "functionRange", ",", " ", "14", ",",
-       "30", ",", "50", ",", "1000", ",", 
-      RowBox[{"resultingParametersForMinPts", "[", 
-       RowBox[{"[", "1", "]"}], "]"}], ",", 
-      RowBox[{"resultingParametersForMinPts", "[", 
-       RowBox[{"[", "2", "]"}], "]"}], ",", 
-      RowBox[{"resultingParametersForMinPts", "[", 
-       RowBox[{"[", "3", "]"}], "]"}], ",", "  ", "realData", ",", " ", "pts",
-       ",", "resultingParametersForMinPts", ",", " ", "PSOAlgorithmOuter"}], 
-     "]"}], ";"}], "\[IndentingNewLine]", 
-   RowBox[{"(*", 
-    RowBox[{
-     RowBox[{"PSOAlgorithmOuter", "[", " ", 
+      RowBox[{"{", "\[IndentingNewLine]", 
+       RowBox[{
+       "outputOfOuterPSOWithTestFunctions", ",", "\[IndentingNewLine]", 
+        "listWithAllMinimumPtsValueForEachFunction", ",", 
+        "\[IndentingNewLine]", "functionList", ",", "\[IndentingNewLine]", 
+        "functionIndexWhichProducedMinimumPts", ",", "\[IndentingNewLine]", 
+        "allParametersC1andC2andWPositionForAGivenFunction", ",", 
+        "\[IndentingNewLine]", 
+        "parametersC1andC2andWWhichProducedMinimumPtsForAGivenFunction", ",", 
+        "u"}], "\[IndentingNewLine]", "}"}], ",", "\[IndentingNewLine]", 
       RowBox[{
-      "f_", ",", "swarmDim_", ",", "fLimit_", ",", " ", "NPForInnerPSO_", ",",
-        "NPForOuterPSO_", ",", "  ", "iterationsForInnerPSO_", ",", 
-       "iterationsForOuterPSO_", ",", " ", "c1_", ",", " ", "c2_", ",", " ", 
-       "w_", ",", " ", "realData_", ",", " ", "pts_"}], "]"}], ";"}], "*)"}], 
-   "\[IndentingNewLine]"}]}]], "Input",
+       RowBox[{"outputOfOuterPSOWithTestFunctions", "=", 
+        RowBox[{"ConstantArray", "[", 
+         RowBox[{"0", ",", 
+          RowBox[{"{", 
+           RowBox[{"7", ",", "5"}], "}"}]}], "]"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"listWithAllMinimumPtsValueForEachFunction", " ", "=", " ", 
+        RowBox[{"Table", "[", 
+         RowBox[{"0", ",", "7"}], "]"}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{"functionList", "=", "fList"}], ";", "\[IndentingNewLine]", 
+       RowBox[{"functionIndexWhichProducedMinimumPts", " ", "=", " ", "0"}], 
+       ";", "\[IndentingNewLine]", 
+       RowBox[{
+       "allParametersC1andC2andWPositionForAGivenFunction", " ", "=", " ", 
+        RowBox[{"ConstantArray", "[", 
+         RowBox[{"0", ",", 
+          RowBox[{"{", 
+           RowBox[{"7", ",", "3"}], "}"}]}], "]"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{
+       "parametersC1andC2andWWhichProducedMinimumPtsForAGivenFunction", " ", 
+        "=", " ", 
+        RowBox[{"ConstantArray", "[", 
+         RowBox[{"0", ",", 
+          RowBox[{"{", 
+           RowBox[{"7", ",", "3"}], "}"}]}], "]"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"For", "[", 
+        RowBox[{
+         RowBox[{"u", "=", "1"}], ",", 
+         RowBox[{"u", "<=", 
+          RowBox[{"Length", "@", "fList"}]}], ",", 
+         RowBox[{"u", "++"}], ",", "\[IndentingNewLine]", 
+         RowBox[{"(*", 
+          RowBox[{
+           RowBox[{"PSOAlgorithmOuter", "[", " ", 
+            RowBox[{
+            "f_", ",", "swarmDim_", ",", "fLimit_", ",", " ", 
+             "NPForInnerPSO_", ",", "NPForOuterPSO_", ",", "  ", 
+             "iterationsForInnerPSO_", ",", "iterationsForOuterPSO_", ",", 
+             " ", "c1_", ",", " ", "c2_", ",", " ", "w_", ",", " ", 
+             "realData_", ",", " ", "pts_"}], "]"}], ";"}], "*)"}], 
+         "\[IndentingNewLine]", 
+         RowBox[{"(*", 
+          RowBox[{
+           RowBox[{"Return", "@", 
+            RowBox[{"{", 
+             RowBox[{
+             "gBestPosition", ",", " ", "historyGBestPosition", ",", " ", 
+              "historyGBestCost", ",", "swarmPositionCost", ",", " ", 
+              "swarmPosition"}], "}"}]}], ";"}], "*)"}], 
+         "\[IndentingNewLine]", 
+         RowBox[{
+          RowBox[{"Print", "[", 
+           RowBox[{"\"\<function range for u values =\>\"", ",", " ", 
+            RowBox[{"functionRange", "[", "u", "]"}]}], "]"}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{
+           RowBox[{"outputOfOuterPSOWithTestFunctions", "[", 
+            RowBox[{"[", "u", "]"}], "]"}], "=", " ", 
+           RowBox[{"PSOAlgorithmOuter", "[", 
+            RowBox[{
+             RowBox[{"functionList", "[", 
+              RowBox[{"[", "u", "]"}], "]"}], ",", " ", "swarmDim", ",", 
+             RowBox[{"functionRange", "[", "u", "]"}], ",", "NPForInnerPSO", 
+             ",", "NPForOuterPSO", ",", "iterationsForInnerPSO", ",", " ", 
+             "iterationsForOuterPSO", ",", 
+             RowBox[{"resultingParametersForMinPts", "[", 
+              RowBox[{"[", "1", "]"}], "]"}], ",", " ", 
+             RowBox[{"resultingParametersForMinPts", "[", 
+              RowBox[{"[", "2", "]"}], "]"}], ",", " ", 
+             RowBox[{"resultingParametersForMinPts", "[", 
+              RowBox[{"[", "3", "]"}], "]"}], ",", "  ", "realData", ",", " ",
+              "pts"}], "]"}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{
+          "allParametersC1andC2andWPositionForAGivenFunction", " ", "=", " ", 
+           RowBox[{
+            RowBox[{"outputOfOuterPSOWithTestFunctions", "[", 
+             RowBox[{"[", "u", "]"}], "]"}], "[", 
+            RowBox[{"[", "5", "]"}], "]"}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{
+           RowBox[{
+           "parametersC1andC2andWWhichProducedMinimumPtsForAGivenFunction", 
+            "[", 
+            RowBox[{"[", "u", "]"}], "]"}], " ", "=", " ", 
+           RowBox[{"allParametersC1andC2andWPositionForAGivenFunction", "[", 
+            RowBox[{"[", 
+             RowBox[{"First", "@", 
+              RowBox[{"First", "@", 
+               RowBox[{"Position", "[", 
+                RowBox[{
+                 RowBox[{
+                  RowBox[{"outputOfOuterPSOWithTestFunctions", "[", 
+                   RowBox[{"[", "u", "]"}], "]"}], "[", 
+                  RowBox[{"[", "4", "]"}], "]"}], ",", " ", 
+                 RowBox[{"Min", "@", 
+                  RowBox[{
+                   RowBox[{"outputOfOuterPSOWithTestFunctions", "[", 
+                    RowBox[{"[", "u", "]"}], "]"}], "[", 
+                   RowBox[{"[", "4", "]"}], "]"}]}]}], "]"}]}]}], "]"}], 
+            "]"}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{
+           RowBox[{"listWithAllMinimumPtsValueForEachFunction", "[", 
+            RowBox[{"[", "u", "]"}], "]"}], "=", " ", 
+           RowBox[{"Min", "[", 
+            RowBox[{
+             RowBox[{"outputOfOuterPSOWithTestFunctions", "[", 
+              RowBox[{"[", "u", "]"}], "]"}], "[", 
+             RowBox[{"[", "4", "]"}], "]"}], "]"}]}], ";"}]}], 
+        "\[IndentingNewLine]", "]"}], ";", "\[IndentingNewLine]", 
+       RowBox[{"functionIndexWhichProducedMinimumPts", " ", "=", " ", 
+        RowBox[{"Position", "[", 
+         RowBox[{"listWithAllMinimumPtsValueForEachFunction", ",", " ", 
+          RowBox[{"Min", "@", "listWithAllMinimumPtsValueForEachFunction"}]}],
+          "]"}]}], ";", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+       RowBox[{"Switch", "[", 
+        RowBox[{
+         RowBox[{"First", "@", 
+          RowBox[{"First", "@", "functionIndexWhichProducedMinimumPts"}]}], 
+         ",", "\[IndentingNewLine]", "1", ",", "\[IndentingNewLine]", 
+         RowBox[{
+          RowBox[{
+          "Print", "@", "\"\<fun1 produced the minimum value of pts\>\""}], 
+          ";", "\[IndentingNewLine]", 
+          RowBox[{"Print", "[", 
+           RowBox[{
+           "parametersC1andC2andWWhichProducedMinimumPtsForAGivenFunction", 
+            "[", 
+            RowBox[{"[", "1", "]"}], "]"}], "]"}], ";", "\[IndentingNewLine]", 
+          RowBox[{"Print", "[", 
+           RowBox[{"listWithAllMinimumPtsValueForEachFunction", "[", 
+            RowBox[{"[", "1", "]"}], "]"}], "]"}], ";"}], 
+         "\[IndentingNewLine]", ",", "\[IndentingNewLine]", "2", ",", " ", 
+         "\[IndentingNewLine]", 
+         RowBox[{
+          RowBox[{
+          "Print", "@", "\"\<fun2 produced the minimum value of pts\>\""}], 
+          ";", "\[IndentingNewLine]", 
+          RowBox[{"Print", "[", 
+           RowBox[{
+           "parametersC1andC2andWWhichProducedMinimumPtsForAGivenFunction", 
+            "[", 
+            RowBox[{"[", "2", "]"}], "]"}], "]"}], ";", "\[IndentingNewLine]", 
+          RowBox[{"Print", "[", 
+           RowBox[{"listWithAllMinimumPtsValueForEachFunction", "[", 
+            RowBox[{"[", "2", "]"}], "]"}], "]"}], ";"}], 
+         "\[IndentingNewLine]", ",", "\[IndentingNewLine]", "3", ",", 
+         "\[IndentingNewLine]", 
+         RowBox[{
+          RowBox[{
+          "Print", "@", "\"\<fun3 produced the minimum value of pts\>\""}], 
+          ";", "\[IndentingNewLine]", 
+          RowBox[{"Print", "[", 
+           RowBox[{
+           "parametersC1andC2andWWhichProducedMinimumPtsForAGivenFunction", 
+            "[", 
+            RowBox[{"[", "3", "]"}], "]"}], "]"}], ";", "\[IndentingNewLine]", 
+          RowBox[{"Print", "[", 
+           RowBox[{"listWithAllMinimumPtsValueForEachFunction", "[", 
+            RowBox[{"[", "3", "]"}], "]"}], "]"}], ";"}], 
+         "\[IndentingNewLine]", ",", "\[IndentingNewLine]", "4", ",", 
+         "\[IndentingNewLine]", 
+         RowBox[{
+          RowBox[{
+          "Print", "@", "\"\<fun4 produced the minimum value of pts\>\""}], 
+          ";", "\[IndentingNewLine]", 
+          RowBox[{"Print", "[", 
+           RowBox[{
+           "parametersC1andC2andWWhichProducedMinimumPtsForAGivenFunction", 
+            "[", 
+            RowBox[{"[", "4", "]"}], "]"}], "]"}], ";", "\[IndentingNewLine]", 
+          RowBox[{"Print", "[", 
+           RowBox[{"listWithAllMinimumPtsValueForEachFunction", "[", 
+            RowBox[{"[", "4", "]"}], "]"}], "]"}], ";"}], 
+         "\[IndentingNewLine]", ",", "\[IndentingNewLine]", "5", ",", 
+         "\[IndentingNewLine]", 
+         RowBox[{
+          RowBox[{
+          "Print", "@", "\"\<fun5 produced the minimum value of pts\>\""}], 
+          ";", "\[IndentingNewLine]", 
+          RowBox[{"Print", "[", 
+           RowBox[{
+           "parametersC1andC2andWWhichProducedMinimumPtsForAGivenFunction", 
+            "[", 
+            RowBox[{"[", "5", "]"}], "]"}], "]"}], ";", "\[IndentingNewLine]", 
+          RowBox[{"Print", "[", 
+           RowBox[{"listWithAllMinimumPtsValueForEachFunction", "[", 
+            RowBox[{"[", "5", "]"}], "]"}], "]"}], ";"}], 
+         "\[IndentingNewLine]", ",", "\[IndentingNewLine]", "6", ",", 
+         "\[IndentingNewLine]", 
+         RowBox[{
+          RowBox[{
+          "Print", "@", "\"\<fun6 produced the minimum value of pts\>\""}], 
+          ";", "\[IndentingNewLine]", 
+          RowBox[{"Print", "[", 
+           RowBox[{
+           "parametersC1andC2andWWhichProducedMinimumPtsForAGivenFunction", 
+            "[", 
+            RowBox[{"[", "6", "]"}], "]"}], "]"}], ";", "\[IndentingNewLine]", 
+          RowBox[{"Print", "[", 
+           RowBox[{"listWithAllMinimumPtsValueForEachFunction", "[", 
+            RowBox[{"[", "6", "]"}], "]"}], "]"}], ";"}], 
+         "\[IndentingNewLine]", ",", "\[IndentingNewLine]", "7", ",", 
+         "\[IndentingNewLine]", 
+         RowBox[{
+          RowBox[{
+          "Print", "@", "\"\<fun7 produced the minimum value of pts\>\""}], 
+          ";", "\[IndentingNewLine]", 
+          RowBox[{"Print", "[", 
+           RowBox[{
+           "parametersC1andC2andWWhichProducedMinimumPtsForAGivenFunction", 
+            "[", 
+            RowBox[{"[", "7", "]"}], "]"}], "]"}], ";", "\[IndentingNewLine]", 
+          RowBox[{"Print", "[", 
+           RowBox[{"listWithAllMinimumPtsValueForEachFunction", "[", 
+            RowBox[{"[", "7", "]"}], "]"}], "]"}], ";"}]}], 
+        "\[IndentingNewLine]", "]"}], ";"}]}], "\[IndentingNewLine]", "]"}]}],
+    ";"}], "\[IndentingNewLine]", "\[IndentingNewLine]", 
+  RowBox[{"(*", " ", 
+   RowBox[{"using", " ", "function", " ", "functionWithBestValueForPts"}], 
+   "*)"}], "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"functionList", "=", 
+    RowBox[{"{", 
+     RowBox[{
+     "fun1", ",", " ", "fun2", ",", " ", "fun3", ",", " ", "fun4", ",", " ", 
+      "fun5", ",", " ", "fun6", ",", " ", "fun7"}], "}"}]}], ";"}], 
+  "\[IndentingNewLine]", 
+  RowBox[{"(*", 
+   RowBox[{"functionWithBestValueForPts", "[", " ", 
+    RowBox[{
+    "fList_", ",", "swarmDim_", ",", "functionRange_", ",", 
+     "\[IndentingNewLine]", " ", "NPForInnerPSO_", ",", "NPForOuterPSO_", ",",
+      "  ", "iterationsForInnerPSO_", ",", "iterationsForOuterPSO_", ",", 
+     "\[IndentingNewLine]", " ", "c1_", ",", " ", "c2_", ",", " ", "w_", ",", 
+     " ", "realData_", ",", " ", "pts_"}], "\[IndentingNewLine]", "]"}], 
+   "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"functionWithBestValueForPts", "[", 
+    RowBox[{
+    "functionList", ",", " ", "3", ",", "functionRange", ",", " ", "14", ",", 
+     "30", ",", "50", ",", "1000", ",", 
+     RowBox[{"resultingParametersForMinPts", "[", 
+      RowBox[{"[", "1", "]"}], "]"}], ",", 
+     RowBox[{"resultingParametersForMinPts", "[", 
+      RowBox[{"[", "2", "]"}], "]"}], ",", 
+     RowBox[{"resultingParametersForMinPts", "[", 
+      RowBox[{"[", "3", "]"}], "]"}], ",", "  ", "realData", ",", " ", "pts", 
+     ",", "resultingParametersForMinPts", ",", " ", "PSOAlgorithmOuter"}], 
+    "]"}], ";"}], "\[IndentingNewLine]", 
+  RowBox[{"(*", 
+   RowBox[{
+    RowBox[{"PSOAlgorithmOuter", "[", " ", 
+     RowBox[{
+     "f_", ",", "swarmDim_", ",", "fLimit_", ",", " ", "NPForInnerPSO_", ",", 
+      "NPForOuterPSO_", ",", "  ", "iterationsForInnerPSO_", ",", 
+      "iterationsForOuterPSO_", ",", " ", "c1_", ",", " ", "c2_", ",", " ", 
+      "w_", ",", " ", "realData_", ",", " ", "pts_"}], "]"}], ";"}], 
+   "*)"}]}], "\[IndentingNewLine]"}], "Input",
  CellChangeTimes->{{3.8871497378608212`*^9, 3.887149747416252*^9}, {
    3.8871497840890203`*^9, 3.887150032214943*^9}, 3.8871501708727603`*^9, 
    3.8871503170562305`*^9, {3.887150407549875*^9, 3.8871504244319043`*^9}, {
@@ -26998,8 +26767,8 @@ Cell[BoxData[
    3.891564745374192*^9}, {3.891566607306086*^9, 3.8915666106354876`*^9}, {
    3.8915666440709496`*^9, 3.8915666454479814`*^9}, {3.8915666813012605`*^9, 
    3.8915667172149067`*^9}, {3.891566826883094*^9, 3.8915668346620626`*^9}, {
-   3.891567202201198*^9, 
-   3.891567231476717*^9}},ExpressionUUID->"eaf35d49-13a3-4603-8433-\
+   3.891567202201198*^9, 3.891567231476717*^9}, {3.8938076991287384`*^9, 
+   3.893807708718768*^9}},ExpressionUUID->"eaf35d49-13a3-4603-8433-\
 a3be00410a90"],
 
 Cell[BoxData[
@@ -27096,11 +26865,8 @@ Cell[1542522, 26356, 481, 9, 32, "Output",ExpressionUUID->"caec2e2f-3c9e-4586-b0
 }, Open  ]],
 Cell[1543018, 26368, 849, 19, 48, "Input",ExpressionUUID->"d8737493-c1c7-43e9-aac7-2cd83c020bcb"],
 Cell[1543870, 26389, 602, 11, 67, "Input",ExpressionUUID->"9479e090-2234-4e63-b236-f702adb70c31"],
-Cell[1544475, 26402, 448, 9, 28, "Input",ExpressionUUID->"d2e68ea9-f0bf-4af4-9a1b-d8b8e8c1c757"],
-Cell[1544926, 26413, 580, 10, 28, "Input",ExpressionUUID->"588ea127-e8b1-4c92-ad2d-68409714159f"],
-Cell[1545509, 26425, 1558, 32, 86, "Input",ExpressionUUID->"f54b7764-4436-40ce-a9f6-04d7d63a2d14"],
-Cell[1547070, 26459, 26651, 543, 2635, "Input",ExpressionUUID->"eaf35d49-13a3-4603-8433-a3be00410a90"],
-Cell[1573724, 27004, 228, 4, 28, "Input",ExpressionUUID->"c47e8e1a-a14b-4616-99be-5ead3ce4987e"]
+Cell[1544475, 26402, 18474, 369, 1684, "Input",ExpressionUUID->"eaf35d49-13a3-4603-8433-a3be00410a90"],
+Cell[1562952, 26773, 228, 4, 28, "Input",ExpressionUUID->"c47e8e1a-a14b-4616-99be-5ead3ce4987e"]
 }
 ]
 *)
