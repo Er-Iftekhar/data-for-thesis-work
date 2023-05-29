@@ -1,0 +1,28 @@
+"Function used for inner PSO  is ""Schwefel' s Function"
+"Swarm dimensions of Inner PSO is "5
+"Swarm dimensions of Outer PSO is "3
+"Function range is "{-5, 5}
+"Population size for inner PSO is "14
+"Population size for outer PSO is "30
+"Max Iterations for inner PSO is "100
+"Max Iterations for outer PSO is "1000
+"C1 parameter for outer PSO is "1.49445
+"C1 population limit for outer PSO is "{1., 2.}
+"C2 parameter for outer PSO is "1.49445
+"C2 population limit for outer PSO is "{1., 2.}
+"W parameter for outer PSO is "0.729
+"W population limit for outer PSO is "{0.4, 0.9}
+"Number of iterations for local search (LUS) is "50
+"Initial outerPSO gBest position"
+  {1.5631202603133427, 1.1334350363968548, 0.5920974876778033}
+"Initial outerPSO gBest cost"5516.1368197107895
+"History of best pts value (gBestCost history) : "
+  {5516.1368197107895, 5516.1368197107895, 5516.1368197107895, 
+   5516.1368197107895, 5516.1368197107895, 5516.1368197107895, 
+   2572.5946212621907, 2448.5651198581427, 2448.565119858143, 
+   2448.565119858143}
+
+"Minimum value of pts detected (gBestCost) : "2448.565119858143
+"Parameters for minimun values of pts (gBestPosition) : "
+  {1.5369590373383373, 1.7453506335320077, 0.612760744006673}
+"Value of Pts on test data for 2020 = "3713.9758282683395
